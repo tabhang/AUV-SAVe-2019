@@ -1,0 +1,8 @@
+prefix=/home/nvidia/catkin/devel
+
+Name: ip_ps3
+Description: Description of ip_ps3
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/nvidia/catkin/devel/lib 
+Requires: 

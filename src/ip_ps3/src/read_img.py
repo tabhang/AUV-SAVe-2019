@@ -1,0 +1,32 @@
+#!/usr/bin/env python
+# license removed for brevity
+import roslib
+import rospy
+from std_msgs.msg import String
+from cv_bridge import CvBridge, CvBridgeError
+import numpy as np
+import cv2
+
+cap = cv2.VideoCapture(1)
+
+
+def talker():
+    # Capture frame-by-frame
+    ret, frame = cap.read()
+
+    # Our operations on the frame come here
+    # gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+    # Display the resulting frame
+    cv2.imshow('frame',frame)
+    cv2.waitKey(3)
+
+
+if __name__ == '__main__':
+ try:
+  rospy.init_node('ps3_reader', anonymous=True)
+  while(1):
+   talker()
+ except KeyboardInterrupt:
+  cap.release()
+  cv2.destroyAllWindows()

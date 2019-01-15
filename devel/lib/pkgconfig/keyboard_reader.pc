@@ -1,0 +1,8 @@
+prefix=/home/nvidia/catkin/devel
+
+Name: keyboard_reader
+Description: Description of keyboard_reader
+Version: 0.0.0
+Cflags: -I/home/nvidia/catkin/devel/include
+Libs: -L/home/nvidia/catkin/devel/lib 
+Requires: 

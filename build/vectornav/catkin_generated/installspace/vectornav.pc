@@ -1,0 +1,8 @@
+prefix=/home/nvidia/catkin/install
+
+Name: vectornav
+Description: Description of vectornav
+Version: 2.0.0
+Cflags: 
+Libs: -L/home/nvidia/catkin/install/lib 
+Requires: roscpp sensor_msgs

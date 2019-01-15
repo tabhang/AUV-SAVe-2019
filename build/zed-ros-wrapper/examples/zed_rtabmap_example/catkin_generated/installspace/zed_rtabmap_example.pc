@@ -1,0 +1,8 @@
+prefix=/home/nvidia/catkin/install
+
+Name: zed_rtabmap_example
+Description: Description of zed_rtabmap_example
+Version: 2.7.0
+Cflags: 
+Libs: -L/home/nvidia/catkin/install/lib 
+Requires: 

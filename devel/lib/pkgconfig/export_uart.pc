@@ -1,0 +1,8 @@
+prefix=/home/nvidia/catkin/devel
+
+Name: export_uart
+Description: Description of export_uart
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/nvidia/catkin/devel/lib 
+Requires: 
