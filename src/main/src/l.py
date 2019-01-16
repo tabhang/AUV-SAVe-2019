@@ -214,17 +214,23 @@ def navigate():
  global Weight_yaw
  global Weight_pitch
  global Weight_roll
- global Weight_imu
+ global required_depth
+ global required_pitch
+ global required_roll
+ global required_yaw
  global moving_towards_object
  global disable_yaw
+ global disable_pitch
+ global disable_roll
  global disable_Vx
  global disable_Vy
- global distance_counter
+ global disable_Vz
  global required_yaw
  global required_depth
  global disable_red
  global disable_white
- global disable_bin 
+ global disable_bin
+ global distance_counter 
  global stop_distance_counter
  disable_Vx = 1
  disable_Vy = 0
@@ -284,6 +290,8 @@ def process():
 #........................................................................navigation cases
  navigate()
 #......................................................................error corrections
+ if(disable_Vx==0):
+  Vx = int(offset_x*Kp_camera_x*Weight_camera_x)
  if(disable_Vy==0):
   Vy = int(offset_y*Kp_camera_y*Weight_camera_y)
  if(disable_Vz==0):
@@ -292,8 +300,6 @@ def process():
   v_pitch = int(error_pitch*Kp_pitch*Weight_pitch)
  if(disable_yaw==0):
   v_yaw = int(error_yaw*Kp_yaw*Weight_yaw + offset_x*Kp_camera_yaw*Weight_camera_yaw)
- #if(disable_Vx==0):
-  #Vx = int(offset_x*Kp_camera_x*Weight_camera_x)
  if(disable_roll==0):
   v_roll = int(error_roll*Kp_roll*Weight_roll)
 #........................................................................................... #

@@ -7,7 +7,7 @@ from cv_bridge import CvBridge, CvBridgeError
 import numpy as np
 import cv2
 
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(2)
 
 pub = rospy.Publisher('bin_error', String, queue_size = 10)
 
