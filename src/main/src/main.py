@@ -106,15 +106,15 @@ def getimu(data):
     pitch = euler[1] * (180 / 3.14)
     yaw_temp = euler[2] * (180 / 3.14)
     # if(roll_temp<0):
-    # roll = 180 - roll_temp
+    # roll = 360 + roll_temp
     # else:
     # roll = roll_temp
     # if(pitch_temp<0):
-    # pitch = 180 - pitch_temp
+    # pitch = 360 + pitch_temp
     # else:
     # pitch = pitch_temp
     if (yaw_temp < 0):
-        yaw = 180 - yaw_temp
+        yaw = 360 + yaw_temp
     else:
         yaw = yaw_temp
     # print str(roll) + ' / ' + str(pitch) + ' / ' + str(yaw)
